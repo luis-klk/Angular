@@ -1,0 +1,33 @@
+<!-- <p>detalleciclo works!{{curso}} {{nombre}}</p>
+ -->
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <br />
+      <img [src]="imagen" class="card-img-top" alt="..." />
+      <h5 class="card-title">{{ curso }} {{ nombre }}</h5>
+
+      <li></li>
+    </div>
+
+    <div class="col-9">
+      <h2>Las asignaturas del ciclo son :</h2>
+      <br />
+
+      <div class="row">
+          <div class="col-3" *ngFor="let item of array"></div>
+          <!-- <app-asignatura [pasar]=""></app-asignatura> -->
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+     
+      </div>
+    </div>
+  </div>
+</div>
