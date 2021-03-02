@@ -10,6 +10,9 @@ import { AsignaturasComponent } from './components/asignaturas/asignaturas.compo
 import { RepetidoPipe } from './pipes/repetido.pipe';
 import { DetallecicloComponent } from './components/detalleciclo/detalleciclo.component';
 import { AsignaturaComponent } from './components/asignatura/asignatura.component';
+import { FiltrociclosPipe } from './pipes/filtrociclos.pipe';
+import { FormsModule } from '@angular/forms';
+import { Pipe3Pipe } from './pipes/pipe3.pipe';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,12 @@ import { AsignaturaComponent } from './components/asignatura/asignatura.componen
     AsignaturasComponent,
     RepetidoPipe,
     DetallecicloComponent,
-    AsignaturaComponent
+    AsignaturaComponent,
+    FiltrociclosPipe,
+    Pipe3Pipe,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,14 +1,16 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'repetido',
+  name: '',
 })
-export class RepetidoPipe implements PipeTransform {
+export class Pipe3Pipe implements PipeTransform {
   transform(value: any, arg: any[]): any {
     const resultadoFiltro = [];
     for (const asignaturas of value) {
-      if (asignaturas.nombre.indexOf(arg) > -1) {
-        resultadoFiltro.push(asignaturas);
+      for (const nueva of asignaturas) {
+        if (nueva.nombre.indexOf(arg) > -1) {
+          resultadoFiltro.push(nueva.nombre);
+        }
       }
     }
     return resultadoFiltro;
